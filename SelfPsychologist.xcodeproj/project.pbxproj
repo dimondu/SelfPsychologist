@@ -10,7 +10,6 @@
 		F44ACB8A28F4143600628CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ACB8928F4143600628CA9 /* AppDelegate.swift */; };
 		F44ACB8C28F4143600628CA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ACB8B28F4143600628CA9 /* SceneDelegate.swift */; };
 		F44ACB8E28F4143600628CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ACB8D28F4143600628CA9 /* ViewController.swift */; };
-		F44ACB9128F4143600628CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44ACB8F28F4143600628CA9 /* Main.storyboard */; };
 		F44ACB9428F4143600628CA9 /* SelfPsychologist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F44ACB9228F4143600628CA9 /* SelfPsychologist.xcdatamodeld */; };
 		F44ACB9628F4143700628CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44ACB9528F4143700628CA9 /* Assets.xcassets */; };
 		F44ACB9928F4143700628CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44ACB9728F4143700628CA9 /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 		F44ACB8928F4143600628CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44ACB8B28F4143600628CA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F44ACB8D28F4143600628CA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F44ACB9028F4143600628CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F44ACB9328F4143600628CA9 /* SelfPsychologist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SelfPsychologist.xcdatamodel; sourceTree = "<group>"; };
 		F44ACB9528F4143700628CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F44ACB9828F4143700628CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 				F44ACB8928F4143600628CA9 /* AppDelegate.swift */,
 				F44ACB8B28F4143600628CA9 /* SceneDelegate.swift */,
 				F44ACB8D28F4143600628CA9 /* ViewController.swift */,
-				F44ACB8F28F4143600628CA9 /* Main.storyboard */,
 				F44ACB9528F4143700628CA9 /* Assets.xcassets */,
 				F44ACB9728F4143700628CA9 /* LaunchScreen.storyboard */,
 				F44ACB9A28F4143700628CA9 /* Info.plist */,
@@ -130,7 +127,6 @@
 			files = (
 				F44ACB9928F4143700628CA9 /* LaunchScreen.storyboard in Resources */,
 				F44ACB9628F4143700628CA9 /* Assets.xcassets in Resources */,
-				F44ACB9128F4143600628CA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,14 +147,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F44ACB8F28F4143600628CA9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F44ACB9028F4143600628CA9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F44ACB9728F4143700628CA9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +284,6 @@
 				INFOPLIST_FILE = SelfPsychologist/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +311,6 @@
 				INFOPLIST_FILE = SelfPsychologist/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
