@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		F44ACB8A28F4143600628CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ACB8928F4143600628CA9 /* AppDelegate.swift */; };
 		F44ACB8C28F4143600628CA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ACB8B28F4143600628CA9 /* SceneDelegate.swift */; };
-		F44ACB8E28F4143600628CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ACB8D28F4143600628CA9 /* ViewController.swift */; };
+		F44ACB8E28F4143600628CA9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ACB8D28F4143600628CA9 /* MainViewController.swift */; };
 		F44ACB9428F4143600628CA9 /* SelfPsychologist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F44ACB9228F4143600628CA9 /* SelfPsychologist.xcdatamodeld */; };
 		F44ACB9628F4143700628CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44ACB9528F4143700628CA9 /* Assets.xcassets */; };
 		F44ACB9928F4143700628CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44ACB9728F4143700628CA9 /* LaunchScreen.storyboard */; };
+		F4FF83C228F41B580024B751 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF83C128F41B580024B751 /* MainCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F44ACB8628F4143600628CA9 /* SelfPsychologist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfPsychologist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44ACB8928F4143600628CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44ACB8B28F4143600628CA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F44ACB8D28F4143600628CA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F44ACB8D28F4143600628CA9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F44ACB9328F4143600628CA9 /* SelfPsychologist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SelfPsychologist.xcdatamodel; sourceTree = "<group>"; };
 		F44ACB9528F4143700628CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F44ACB9828F4143700628CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F44ACB9A28F4143700628CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4FF83C128F41B580024B751 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				F44ACB8928F4143600628CA9 /* AppDelegate.swift */,
 				F44ACB8B28F4143600628CA9 /* SceneDelegate.swift */,
-				F44ACB8D28F4143600628CA9 /* ViewController.swift */,
+				F44ACB8D28F4143600628CA9 /* MainViewController.swift */,
+				F4FF83C128F41B580024B751 /* MainCell.swift */,
 				F44ACB9528F4143700628CA9 /* Assets.xcassets */,
 				F44ACB9728F4143700628CA9 /* LaunchScreen.storyboard */,
 				F44ACB9A28F4143700628CA9 /* Info.plist */,
@@ -137,10 +140,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F44ACB8E28F4143600628CA9 /* ViewController.swift in Sources */,
+				F44ACB8E28F4143600628CA9 /* MainViewController.swift in Sources */,
 				F44ACB8A28F4143600628CA9 /* AppDelegate.swift in Sources */,
 				F44ACB8C28F4143600628CA9 /* SceneDelegate.swift in Sources */,
 				F44ACB9428F4143600628CA9 /* SelfPsychologist.xcdatamodeld in Sources */,
+				F4FF83C228F41B580024B751 /* MainCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
