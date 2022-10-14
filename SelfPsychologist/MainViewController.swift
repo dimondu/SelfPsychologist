@@ -7,53 +7,28 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDelegate {
+class MainViewController: UIViewController {
     
-    var tableView = UITableView()
+    // MARK: - Override methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationItem.title = "Psychologist"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        
-        setTableView()
-        view.addSubview(tableView)
-        
-    
+        view.backgroundColor = .white
+        setupNavigationBar()
     }
     
-    func setTableView() {
-        tableView = UITableView(frame: view.bounds)
-        tableView.register(MainCell.self, forCellReuseIdentifier: "MainViewCell")
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.delegate = self
-        tableView.dataSource = self
-    }
-}
-
-// MARK: - Table view data source
-
-extension MainViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+    // MARK: - Private methods
+    
+    private func setupNavigationBar() {
+        title = "Self-Psychologist"
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.backgroundColor = .systemMint
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainViewCell", for: indexPath) as? MainCell else { return UITableViewCell() }
-        
-        var content = cell.defaultContentConfiguration()
-        
-        content.text = "HELLO \(indexPath)"
-        
-        cell.contentConfiguration = content
-        
-        
-        
-        return cell
-    }
-    
+   
     
 }
-
-
