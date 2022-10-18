@@ -7,10 +7,11 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     
-    // MARK: - Private methods
+    // MARK: - Private properties
     
+    private let tools = Tool.getTools()
     private var tableView =  UITableView()
     
     // MARK: - Override methods
@@ -61,17 +62,39 @@ class MainViewController: UIViewController {
     }
 }
 
-// MARK: - Table view data source an Table view delegate
+// MARK: - Table view data source
 
-extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        tools.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as? MainCell else { return UITableViewCell() }
-        cell.textLabel?.text = "HELLO"
+        let tool = tools[indexPath.row]
+        
+        //TODO: Перенести в класс ячейки
+        
+        var content = cell.defaultContentConfiguration()
+        content.text = tool.name
+        content.textProperties.alignment = .center
+        content.secondaryText = tool.description
+        content.secondaryTextProperties.alignment = .center
+        
+        cell.contentConfiguration = content
+        
         return cell
+    }
+    
+}
+
+// MARK: - Table view delegate
+
+extension MainViewController:  UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        
     }
     
 }

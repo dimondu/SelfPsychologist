@@ -13,6 +13,8 @@
 		F44ACB9428F4143600628CA9 /* SelfPsychologist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F44ACB9228F4143600628CA9 /* SelfPsychologist.xcdatamodeld */; };
 		F44ACB9628F4143700628CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44ACB9528F4143700628CA9 /* Assets.xcassets */; };
 		F44ACB9928F4143700628CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44ACB9728F4143700628CA9 /* LaunchScreen.storyboard */; };
+		F4BB364228FEA02F00350940 /* ToolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB364128FEA02F00350940 /* ToolModel.swift */; };
+		F4BB364428FEBD1100350940 /* WhatProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB364328FEBD1100350940 /* WhatProblemViewController.swift */; };
 		F4FF83C228F41B580024B751 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF83C128F41B580024B751 /* MainCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		F44ACB9528F4143700628CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F44ACB9828F4143700628CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F44ACB9A28F4143700628CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4BB364128FEA02F00350940 /* ToolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolModel.swift; sourceTree = "<group>"; };
+		F4BB364328FEBD1100350940 /* WhatProblemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatProblemViewController.swift; sourceTree = "<group>"; };
 		F4FF83C128F41B580024B751 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,16 +62,66 @@
 		F44ACB8828F4143600628CA9 /* SelfPsychologist */ = {
 			isa = PBXGroup;
 			children = (
-				F44ACB8928F4143600628CA9 /* AppDelegate.swift */,
-				F44ACB8B28F4143600628CA9 /* SceneDelegate.swift */,
-				F44ACB8D28F4143600628CA9 /* MainViewController.swift */,
-				F4FF83C128F41B580024B751 /* MainCell.swift */,
-				F44ACB9528F4143700628CA9 /* Assets.xcassets */,
-				F44ACB9728F4143700628CA9 /* LaunchScreen.storyboard */,
-				F44ACB9A28F4143700628CA9 /* Info.plist */,
-				F44ACB9228F4143600628CA9 /* SelfPsychologist.xcdatamodeld */,
+				F4BB364628FEBDEA00350940 /* ViewControllers */,
+				F4BB364728FEBDF700350940 /* Models */,
+				F4BB364A28FEBE2800350940 /* Resources */,
+				F4BB364828FEBE0500350940 /* Storyboards */,
+				F4BB364528FEBD2500350940 /* App */,
 			);
 			path = SelfPsychologist;
+			sourceTree = "<group>";
+		};
+		F4BB364528FEBD2500350940 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F44ACB8928F4143600628CA9 /* AppDelegate.swift */,
+				F44ACB8B28F4143600628CA9 /* SceneDelegate.swift */,
+				F44ACB9A28F4143700628CA9 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F4BB364628FEBDEA00350940 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4BB364928FEBE1800350940 /* Cells */,
+				F44ACB8D28F4143600628CA9 /* MainViewController.swift */,
+				F4BB364328FEBD1100350940 /* WhatProblemViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F4BB364728FEBDF700350940 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F44ACB9228F4143600628CA9 /* SelfPsychologist.xcdatamodeld */,
+				F4BB364128FEA02F00350940 /* ToolModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F4BB364828FEBE0500350940 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F44ACB9728F4143700628CA9 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F4BB364928FEBE1800350940 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F4FF83C128F41B580024B751 /* MainCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F4BB364A28FEBE2800350940 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F44ACB9528F4143700628CA9 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,7 +198,9 @@
 				F44ACB8A28F4143600628CA9 /* AppDelegate.swift in Sources */,
 				F44ACB8C28F4143600628CA9 /* SceneDelegate.swift in Sources */,
 				F44ACB9428F4143600628CA9 /* SelfPsychologist.xcdatamodeld in Sources */,
+				F4BB364428FEBD1100350940 /* WhatProblemViewController.swift in Sources */,
 				F4FF83C228F41B580024B751 /* MainCell.swift in Sources */,
+				F4BB364228FEA02F00350940 /* ToolModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5QX49B9H53;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SelfPsychologist/Info.plist;
+				INFOPLIST_FILE = SelfPsychologist/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -312,7 +368,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5QX49B9H53;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SelfPsychologist/Info.plist;
+				INFOPLIST_FILE = SelfPsychologist/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
