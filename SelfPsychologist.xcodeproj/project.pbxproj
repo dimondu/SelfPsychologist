@@ -13,6 +13,7 @@
 		F44ACB9428F4143600628CA9 /* SelfPsychologist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F44ACB9228F4143600628CA9 /* SelfPsychologist.xcdatamodeld */; };
 		F44ACB9628F4143700628CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44ACB9528F4143700628CA9 /* Assets.xcassets */; };
 		F44ACB9928F4143700628CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44ACB9728F4143700628CA9 /* LaunchScreen.storyboard */; };
+		F493565729002337002760D6 /* WhatProblemQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493565629002337002760D6 /* WhatProblemQuestionsViewController.swift */; };
 		F4BB364228FEA02F00350940 /* ToolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB364128FEA02F00350940 /* ToolModel.swift */; };
 		F4BB364428FEBD1100350940 /* WhatProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB364328FEBD1100350940 /* WhatProblemViewController.swift */; };
 		F4FF83C228F41B580024B751 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF83C128F41B580024B751 /* MainCell.swift */; };
@@ -27,6 +28,7 @@
 		F44ACB9528F4143700628CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F44ACB9828F4143700628CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F44ACB9A28F4143700628CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F493565629002337002760D6 /* WhatProblemQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatProblemQuestionsViewController.swift; sourceTree = "<group>"; };
 		F4BB364128FEA02F00350940 /* ToolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolModel.swift; sourceTree = "<group>"; };
 		F4BB364328FEBD1100350940 /* WhatProblemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatProblemViewController.swift; sourceTree = "<group>"; };
 		F4FF83C128F41B580024B751 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				F4BB364928FEBE1800350940 /* Cells */,
 				F44ACB8D28F4143600628CA9 /* MainViewController.swift */,
 				F4BB364328FEBD1100350940 /* WhatProblemViewController.swift */,
+				F493565629002337002760D6 /* WhatProblemQuestionsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			files = (
 				F44ACB8E28F4143600628CA9 /* MainViewController.swift in Sources */,
 				F44ACB8A28F4143600628CA9 /* AppDelegate.swift in Sources */,
+				F493565729002337002760D6 /* WhatProblemQuestionsViewController.swift in Sources */,
 				F44ACB8C28F4143600628CA9 /* SceneDelegate.swift in Sources */,
 				F44ACB9428F4143600628CA9 /* SelfPsychologist.xcdatamodeld in Sources */,
 				F4BB364428FEBD1100350940 /* WhatProblemViewController.swift in Sources */,

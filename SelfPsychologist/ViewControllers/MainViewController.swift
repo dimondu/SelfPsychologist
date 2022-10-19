@@ -93,8 +93,14 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController:  UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        navigationController?.pushViewController(WhatProblemViewController(), animated: true)
         
     }
-    
+
+//    // MARK: - Navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let whatProblemVC = segue.destination as? WhatProblemViewController else { return }
+//        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+//        contactDetailsVC.contact = persons[indexPath.row]
+//    }
 }
