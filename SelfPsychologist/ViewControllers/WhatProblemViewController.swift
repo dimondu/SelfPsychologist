@@ -31,7 +31,6 @@ class WhatProblemViewController: UIViewController {
         descriptionLabel.text = "Здесь какое-то описание того, что ожидает человека после нажатия на кнопку Начать."
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .center
-        descriptionLabel.font.withSize(30)
         setDescriptionLabelConstraints()
     }
     
