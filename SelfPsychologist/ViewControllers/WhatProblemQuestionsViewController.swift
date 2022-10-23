@@ -8,33 +8,43 @@
 import UIKit
 
 
-class WhatProblemQuestionsViewController: UIViewController {
+final class WhatProblemQuestionsViewController: UIViewController {
     
     // MARK: - Private properties
     
-    private let questionLabel = UILabel()
-    private let nextButton = UIButton()
-    private let answerTextField = UITextField()
+    lazy private var questionLabel = PsyLabel()
+    lazy private var nextButton = PsyButton(type: .system)
+    lazy private var answerTextField = UITextField()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
+        view.backgroundColor = .systemIndigo
         title = "Вопрос №1"
-        
         setQuestionLabel()
         setNextButton()
         setAnswerTextField()
+        setNavigationBar()
+    
     }
     
     // MARK: Private methods
     
-    //TODO: УБРАТЬ ПОВТОРЯЮЩИЙСЯ КОД, СДЕЛАТЬ ОТДЕЛЬНЫЙ КЛАСС ИЛИ РАСШИРЕНИЕ
+    private func setNavigationBar() {
+        navigationItem.hidesBackButton = true
+        
+        let barButtonExit = UIBarButtonItem(barButtonSystemItem: .close,
+                                            target: self,
+                                            action: #selector(closeButton))
+        navigationItem.rightBarButtonItem = barButtonExit
+        navigationController?.modalPresentationStyle = .fullScreen
+    }
+    
+    
     private func setQuestionLabel() {
         view.addSubview(questionLabel)
         questionLabel.text = "Как звучит ваша проблема?"
-        questionLabel.numberOfLines = 0
-        questionLabel.textAlignment = .center
+
         setQuestionLabelConstraints()
     }
     
@@ -47,14 +57,11 @@ class WhatProblemQuestionsViewController: UIViewController {
         ])
     }
     
-    //TODO: УБРАТЬ ПОВТОРЯЮЩИЙСЯ КОД, СДЕЛАТЬ ОТДЕЛЬНЫЙ КЛАСС ИЛИ РАСШИРЕНИЕ
     private func setNextButton() {
         view?.addSubview(nextButton)
         
+        nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
         nextButton.setTitle("Далее", for: .normal)
-        nextButton.titleLabel?.font.withSize(30)
-        nextButton.backgroundColor = .red
-        nextButton.layer.cornerRadius = 10
         setNextButtonsConstraints()
         
 //        nextButton.addTarget(self, action: #selector(nextButtonOnClick), for: .touchUpInside)
@@ -77,6 +84,8 @@ class WhatProblemQuestionsViewController: UIViewController {
         answerTextField.borderStyle = .bezel
         answerTextField.placeholder = "Введите название проблемы"
         answerTextField.backgroundColor = .white
+        answerTextField.layer.cornerRadius = 10
+        answerTextField.layer.masksToBounds = true
         
         setAnswerTextFieldConstraints()
         
@@ -91,9 +100,9 @@ class WhatProblemQuestionsViewController: UIViewController {
         ])
     }
     
-//    @objc private func nextButtonOnClick() {
-//        navigationController?.pushViewController(WhatProblemQuestionsViewController(), animated: true)
-//    }
+    @objc private func closeButton() {
+        navigationController?.dismiss(animated: true)
+    }
     
     
     

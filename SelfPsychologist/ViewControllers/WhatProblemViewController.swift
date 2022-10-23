@@ -7,18 +7,19 @@
 
 import UIKit
 
-class WhatProblemViewController: UIViewController {
+
+final class WhatProblemViewController: UIViewController {
     
     // MARK: Private properties
     
-    private let descriptionLabel = UILabel()
-    private let startButton = UIButton()
+    lazy private var descriptionLabel = PsyLabel()
+    lazy private var startButton = PsyButton(type: .system)
     
     // MARK: Override methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
+        view.backgroundColor = .systemIndigo
         setDesctiptionLabel()
         setStartButton()
         title = "В чём проблема?"
@@ -28,9 +29,11 @@ class WhatProblemViewController: UIViewController {
     
     private func setDesctiptionLabel() {
         view.addSubview(descriptionLabel)
-        descriptionLabel.text = "Здесь какое-то описание того, что ожидает человека после нажатия на кнопку Начать."
-        descriptionLabel.numberOfLines = 0
-        descriptionLabel.textAlignment = .center
+        descriptionLabel.text = """
+        Чтобы справиться с проблемой, нужно знать в чём именно эта проблема заключается.
+        После нажатия на кнопку Начать, вам предстоит ответить на несколько простых вопросов, они помогут определить в чём проблема
+        """
+        
         setDescriptionLabelConstraints()
     }
     
@@ -45,13 +48,11 @@ class WhatProblemViewController: UIViewController {
     private func setStartButton() {
         view?.addSubview(startButton)
         
+        startButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
         startButton.setTitle("Начать", for: .normal)
-        startButton.titleLabel?.font.withSize(30)
-        startButton.backgroundColor = .red
-        startButton.layer.cornerRadius = 10
         setStartButtonsConstraints()
         
-        startButton.addTarget(self, action: #selector(startButtonOnClick), for: .touchUpInside)
+        startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
     }
     
     private func setStartButtonsConstraints() {
@@ -65,7 +66,13 @@ class WhatProblemViewController: UIViewController {
         ])
     }
     
-    @objc private func startButtonOnClick() {
-        navigationController?.pushViewController(WhatProblemQuestionsViewController(), animated: true)
+    @objc private func startButtonTapped() {
+        
+        let whatProblemQuestionVC = WhatProblemQuestionsViewController()
+        let navigationController = UINavigationController(rootViewController: whatProblemQuestionVC)
+        navigationController.modalPresentationStyle = .fullScreen
+        self.navigationController?.present(navigationController, animated: true)
+
+        
     }
 }

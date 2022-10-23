@@ -7,12 +7,55 @@
 
 import UIKit
 
+
 final class MainViewController: UIViewController {
     
     // MARK: - Private properties
     
-    private let tools = Tool.getTools()
-    private var tableView =  UITableView()
+    lazy private var stackView =  UIStackView()
+    lazy private var whatProblemButton: PsyButton = {
+        let whatProblemButton = PsyButton(type: .system)
+        whatProblemButton.setTitle("В чём проблема?", for: .normal)
+        whatProblemButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        whatProblemButton.addTarget(self,
+                                    action: #selector(whatProblemButtomTapped),
+                                    for: .touchUpInside)
+        
+        return whatProblemButton
+    }()
+    
+    lazy private var solvingProblem: PsyButton = {
+        let solvingProblem = PsyButton(type: .system)
+        solvingProblem.setTitle("Решить проблему", for: .normal)
+        solvingProblem.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        solvingProblem.addTarget(self,
+                                 action: #selector(solvingProblemButtomTapped),
+                                 for: .touchUpInside)
+        
+        return solvingProblem
+    }()
+    
+    lazy private var energyButton: PsyButton = {
+        let energyButton = PsyButton(type: .system)
+        energyButton.setTitle("Энергия/Бодрость", for: .normal)
+        energyButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        return energyButton
+    }()
+
+    lazy private var meditationButton: PsyButton = {
+        let meditationButton = PsyButton(type: .system)
+        meditationButton.setTitle("Медитации", for: .normal)
+        meditationButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        return meditationButton
+    }()
+
+
+    lazy private var aimButton: PsyButton = {
+        let aimButton = PsyButton(type: .system)
+        aimButton.setTitle("Цель", for: .normal)
+        aimButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        return aimButton
+    }()
     
     // MARK: - Override methods
     
@@ -20,7 +63,7 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupNavigationBar()
-        configureTableView()
+        configureStackView()
     }
     
     // MARK: - Private methods
@@ -38,69 +81,39 @@ final class MainViewController: UIViewController {
         navigationController?.navigationBar.standardAppearance = navBarAppearance
     }
     
-    private func configureTableView() {
-        view.addSubview(tableView)
-        setTableViewDelegates()
-        tableView.rowHeight = 100
-        tableView.register(MainCell.self, forCellReuseIdentifier: "menuCell")
-        setTableViewConstraints()
+    private func configureStackView() {
+        view.addSubview(stackView)
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        stackView.distribution = .fillEqually
+
+        stackView.addArrangedSubview(whatProblemButton)
+        stackView.addArrangedSubview(solvingProblem)
+        stackView.addArrangedSubview(energyButton)
+        stackView.addArrangedSubview(meditationButton)
+        stackView.addArrangedSubview(aimButton)
+        
+        setStackViewConstraints()
     }
     
-    private func setTableViewDelegates() {
-        tableView.dataSource = self
-        tableView.delegate = self
-    }
     
-    private func setTableViewConstraints() {
-        tableView.translatesAutoresizingMaskIntoConstraints = false
+    private func setStackViewConstraints() {
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20 ),
+            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
     }
-}
-
-// MARK: - Table view data source
-
-extension MainViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tools.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as? MainCell else { return UITableViewCell() }
-        let tool = tools[indexPath.row]
-        
-        //TODO: Перенести в класс ячейки
-        
-        var content = cell.defaultContentConfiguration()
-        content.text = tool.name
-        content.textProperties.alignment = .center
-        content.secondaryText = tool.description
-        content.secondaryTextProperties.alignment = .center
-        
-        cell.contentConfiguration = content
-        
-        return cell
-    }
-    
-}
-
-// MARK: - Table view delegate
-
-extension MainViewController:  UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+    @objc private func whatProblemButtomTapped() {
         navigationController?.pushViewController(WhatProblemViewController(), animated: true)
-        
     }
-
-//    // MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let whatProblemVC = segue.destination as? WhatProblemViewController else { return }
-//        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-//        contactDetailsVC.contact = persons[indexPath.row]
-//    }
+    @objc private func solvingProblemButtomTapped() {
+        navigationController?.pushViewController(WhatProblemQuestionsViewController(), animated: true)
+    }
+   
 }
+
+
