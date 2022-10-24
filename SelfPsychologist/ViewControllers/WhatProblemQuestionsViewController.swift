@@ -15,6 +15,7 @@ final class WhatProblemQuestionsViewController: UIViewController {
     lazy private var questionLabel = PsyLabel()
     lazy private var nextButton = PsyButton(type: .system)
     lazy private var answerTextField = UITextField()
+    lazy private var questionNumber = 0
     
     
     override func viewDidLoad() {
@@ -25,7 +26,6 @@ final class WhatProblemQuestionsViewController: UIViewController {
         setNextButton()
         setAnswerTextField()
         setNavigationBar()
-    
     }
     
     // MARK: Private methods
@@ -40,10 +40,10 @@ final class WhatProblemQuestionsViewController: UIViewController {
         navigationController?.modalPresentationStyle = .fullScreen
     }
     
-    
     private func setQuestionLabel() {
         view.addSubview(questionLabel)
         questionLabel.text = "Как звучит ваша проблема?"
+        questionLabel.textAlignment = .center
 
         setQuestionLabelConstraints()
     }
@@ -64,7 +64,61 @@ final class WhatProblemQuestionsViewController: UIViewController {
         nextButton.setTitle("Далее", for: .normal)
         setNextButtonsConstraints()
         
-//        nextButton.addTarget(self, action: #selector(nextButtonOnClick), for: .touchUpInside)
+        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func nextButtonTapped() {
+        if questionNumber == 0 {
+            // Сохраняем то, что ввёл
+            
+            title = "Вопрос №2"
+            
+            questionLabel.text = "Что в этом неприятного?"
+    
+            answerTextField.text = ""
+            answerTextField.placeholder = "Напишите что в вашай проблеме неприятного"
+            
+            questionNumber += 1
+        } else if questionNumber == 1 {
+            // Сохраняем то, что ввёл
+            
+            title = "Вопрос №3"
+            
+            questionLabel.text = "Что неприятного в этом неприятном?"
+    
+            answerTextField.text = ""
+            answerTextField.placeholder = "Напишите что неприятного в предыдущем неприятном"
+            
+            questionNumber += 1
+        } else if questionNumber == 2 {
+            // Сохраняем то, что ввёл
+            
+            title = "Вопрос №4"
+            
+            questionLabel.text = "Что будет решением вашей проблемы?"
+    
+            answerTextField.text = ""
+            answerTextField.placeholder = "Напишите что будет решением вашей проблемы"
+            
+            questionNumber += 1
+        } else if questionNumber == 3 {
+            // Сохраняем то, что ввёл
+            
+            title = "Вопрос №5"
+            
+            questionLabel.text = "Что неприятного произойдёт, если решиться эта проблема?"
+    
+            answerTextField.text = ""
+            answerTextField.placeholder = "Напишите что неприятного произойдет, если проблема решиться"
+            
+            questionNumber += 1
+        } else if questionNumber == 4 {
+            // Сохраняем то, что ввёл
+            
+            show(WhatProblemResult(), sender: nextButton)
+            
+            questionNumber = 0
+        }
     }
     
     private func setNextButtonsConstraints() {
@@ -74,7 +128,6 @@ final class WhatProblemQuestionsViewController: UIViewController {
             nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             nextButton.heightAnchor.constraint(equalToConstant: 50),
             nextButton.widthAnchor.constraint(equalToConstant: 200)
-            
         ])
     }
     
@@ -88,7 +141,6 @@ final class WhatProblemQuestionsViewController: UIViewController {
         answerTextField.layer.masksToBounds = true
         
         setAnswerTextFieldConstraints()
-        
     }
     
     private func setAnswerTextFieldConstraints() {
@@ -103,7 +155,6 @@ final class WhatProblemQuestionsViewController: UIViewController {
     @objc private func closeButton() {
         navigationController?.dismiss(animated: true)
     }
-    
-    
+
     
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F4408FBD2904620400A0F3FC /* PsyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4408FBC2904620400A0F3FC /* PsyLabel.swift */; };
+		F4408FBF29066E0B00A0F3FC /* WhatProblemResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4408FBE29066E0B00A0F3FC /* WhatProblemResults.swift */; };
 		F44ACB8A28F4143600628CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ACB8928F4143600628CA9 /* AppDelegate.swift */; };
 		F44ACB8C28F4143600628CA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ACB8B28F4143600628CA9 /* SceneDelegate.swift */; };
 		F44ACB8E28F4143600628CA9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44ACB8D28F4143600628CA9 /* MainViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		F4408FBC2904620400A0F3FC /* PsyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsyLabel.swift; sourceTree = "<group>"; };
+		F4408FBE29066E0B00A0F3FC /* WhatProblemResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatProblemResults.swift; sourceTree = "<group>"; };
 		F44ACB8628F4143600628CA9 /* SelfPsychologist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfPsychologist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44ACB8928F4143600628CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44ACB8B28F4143600628CA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				F44ACB8D28F4143600628CA9 /* MainViewController.swift */,
 				F4BB364328FEBD1100350940 /* WhatProblemViewController.swift */,
 				F493565629002337002760D6 /* WhatProblemQuestionsViewController.swift */,
+				F4408FBE29066E0B00A0F3FC /* WhatProblemResults.swift */,
 				F49F48F729030E1D00851523 /* PsyButton.swift */,
 				F4408FBC2904620400A0F3FC /* PsyLabel.swift */,
 			);
@@ -196,6 +199,7 @@
 				F44ACB8A28F4143600628CA9 /* AppDelegate.swift in Sources */,
 				F493565729002337002760D6 /* WhatProblemQuestionsViewController.swift in Sources */,
 				F44ACB8C28F4143600628CA9 /* SceneDelegate.swift in Sources */,
+				F4408FBF29066E0B00A0F3FC /* WhatProblemResults.swift in Sources */,
 				F49F48F829030E1D00851523 /* PsyButton.swift in Sources */,
 				F44ACB9428F4143600628CA9 /* SelfPsychologist.xcdatamodeld in Sources */,
 				F4408FBD2904620400A0F3FC /* PsyLabel.swift in Sources */,
